@@ -47,3 +47,9 @@ When the installation is done , just run
 ```bash
 $npm start
 ```
+
+## App simulation
+
+
+https://user-images.githubusercontent.com/30931813/142780323-1014cf0f-6930-4e61-b981-782c94e872b3.mp4
+
