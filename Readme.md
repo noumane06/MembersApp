@@ -1,10 +1,10 @@
 # Fitness app 
 ## Technologies
-this was developped using React native and expo .
+This app was developped using React Native and Expo .
 ## Project hierarchy
 The whole project is developped with typescript .
 ### Assets
-thats where all the icons , images and the svgs go
+that's where all the icons , images and the svgs go
 
 ### Hooks
 
@@ -28,7 +28,7 @@ Styles that are being used from more than one component or screen
 
 ## How to run the app
 
-Since we are using expo u must have expo cli installed 
+Since we are using expo you must have expo cli installed 
 
 Assuming that you have [Node 12 LTS](https://nodejs.org/en/download/) or greater installed, you can use npm to install the Expo CLI command line utility:
 
