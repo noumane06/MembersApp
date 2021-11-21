@@ -77,7 +77,7 @@ const HomeRoute:React.SFC<IHomeROute> = ({navigation}) => {
   );}
 
 
-export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
+export default function Navigation() {
   
   return (
     <NavigationContainer theme={navTheme} >

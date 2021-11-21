@@ -16,7 +16,6 @@ const styles = StyleSheet.create({
     zIndex: -1,
     height: 70,
     flexDirection: "row",
-    width: "65%",
     backgroundColor: "#FE7762",
     shadowColor: "#FE7762",
     shadowOffset: {
@@ -25,11 +24,7 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.32,
     shadowRadius: 5.46,
-    // elevation: 9,
-    borderTopLeftRadius: 16,
-    borderBottomLeftRadius: 16,
-    borderTopRightRadius: 0,
-    borderBottomRightRadius: 0,
+    borderRadius: 16,
   },
   TextContainer: {
     display: "flex",
@@ -39,9 +34,12 @@ const styles = StyleSheet.create({
     zIndex:20
   },
 });
+interface IProgressTypes {
+  count: number;
+  setIsPaused: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
-const ProgressBar = () => {
-
+const ProgressBar:React.SFC<IProgressTypes> = ({count ,}) => {
   return (
     <View style={styles.container}>
       <View style={styles.TextContainer}>
@@ -54,9 +52,9 @@ const ProgressBar = () => {
         style={{ fontFamily: "poppins-regular", fontSize: 14, color: "#fff" }}
         >Details about it</Text>
       </View>
-      <View style={styles.progressBar}></View>
+      <View style={[styles.progressBar,{width: `${parseInt((count / 120* 100).toString())}%`}]}></View>
       <View style={{alignSelf:"center",marginRight:10}}>
-          <Text style={{fontFamily: "poppins-regular", fontSize: 24, color: "#FE7762"}} >65%</Text>
+          <Text style={count < 100 ? {fontFamily: "poppins-regular", fontSize: 24, color: "#FE7762"} : {fontFamily: "poppins-regular", fontSize: 24, color: "#FFF"}} >{`${parseInt((count / 120* 100).toString())}%`}</Text>
       </View>
     </View>
   );
